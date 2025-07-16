@@ -1,13 +1,28 @@
 {
-  "name": "@kubevirt-ui/kubevirt-api",
-  "version": "1.3.8",
+  "name": "@coderpad/kubevirt-api",
+  "version": "1.4.0",
   "description": "kubevirt OpenAPI automation for TypeScript",
   "files": [
-    "containerized-data-importer/*",
-    "kubevirt/*",
-    "kubernetes/*",
-    "console/*"
+    "dist"
   ],
+  "exports": {
+    "./console": {
+      "types": "./dist/console/index.d.ts",
+      "default": "./dist/console/index.js"
+    },
+    "./containerized-data-importer": {
+      "types": "./dist/containerized-data-importer/index.d.ts",
+      "default": "./dist/containerized-data-importer/index.js"
+    },
+    "./kubevirt": {
+      "types": "./dist/kubevirt/index.d.ts",
+      "default": "./dist/kubevirt/index.js"
+    },
+    "./kubernetes": {
+      "types": "./dist/kubernetes/index.d.ts",
+      "default": "./dist/kubernetes/index.js"
+    }
+  },
   "scripts": {
     "generate": "bash ./scripts/generate.sh",
     "generate:fix-console": "bash ./scripts/fix-console-models.sh",
@@ -17,11 +32,12 @@
     "clean:all": "rm -rf ./docs ./generated ./kubevirt ./containerized-data-importer ./console/core/index.ts ./console-core-models.ts ./kubernetes swagger-*.json",
     "lint": "eslint console kubevirt kubernetes containerized-data-importer --color --no-inline-config",
     "lint:fix": "yarn lint --fix",
-    "test": "echo \"It's all OK\" && exit 0"
+    "test": "echo \"It's all OK\" && exit 0",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kubevirt-ui/kubevirt-api.git"
+    "url": "git+https://github.com/CodinGame/kubevirt-api.git"
   },
   "devDependencies": {
     "@openapitools/openapi-generator-cli": "^2.20.2",
@@ -40,7 +56,7 @@
     "tslint-etc": "^1.13.10",
     "typedoc": "^0.22.11",
     "typedoc-plugin-reference-excluder": "^1.0.0",
-    "typescript": "^4.5.5"
+    "typescript": "^5.8.3"
   },
   "keywords": [
     "kubevirt",
@@ -54,7 +70,7 @@
   "author": "Yaacov Zamir <yzamir@redhat.com>",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/kubevirt-ui/kubevirt-api/issues"
+    "url": "https://github.com/CodinGame/kubevirt-api/issues"
   },
-  "homepage": "https://github.com/kubevirt-ui/kubevirt-api#readme"
+  "homepage": "https://github.com/CodinGame/kubevirt-api#readme"
 }
