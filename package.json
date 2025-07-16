@@ -1,6 +1,6 @@
 {
-  "name": "@coderpad/kubevirt-api",
-  "version": "1.4.0",
+  "name": "@codingame/kubevirt-api",
+  "version": "1.4.1",
   "description": "kubevirt OpenAPI automation for TypeScript",
   "files": [
     "dist"
