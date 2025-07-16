@@ -1,5 +1,5 @@
 {
-  "name": "@kubevirt-ui/kubevirt-api",
+  "name": "@coderpad/kubevirt-api",
   "version": "1.4.0",
   "description": "kubevirt OpenAPI automation for TypeScript",
   "files": [
@@ -37,7 +37,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kubevirt-ui/kubevirt-api.git"
+    "url": "git+https://github.com/CodinGame/kubevirt-api.git"
   },
   "devDependencies": {
     "@openapitools/openapi-generator-cli": "^2.20.2",
@@ -70,7 +70,7 @@
   "author": "Yaacov Zamir <yzamir@redhat.com>",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/kubevirt-ui/kubevirt-api/issues"
+    "url": "https://github.com/CodinGame/kubevirt-api/issues"
   },
-  "homepage": "https://github.com/kubevirt-ui/kubevirt-api#readme"
+  "homepage": "https://github.com/CodinGame/kubevirt-api#readme"
 }
